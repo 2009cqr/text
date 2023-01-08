@@ -32,7 +32,7 @@ void U(int x,int y){
 	f[xx]=f[yy];
 }
 void init(){
-	rep(i,1,3*n)f[i]=i;//1~n其本身 n+1~2n其猎物 2n+1~3n其天敌 
+	rep(i,1,3*n)f[i]=i;//1~n脝盲卤戮脡铆 n+1~2n脝盲脕脭脦茂 2n+1~3n脝盲脤矛碌脨 
 	flag=0;
 }
 signed main(){
