@@ -23,7 +23,7 @@ template<typename T, typename ... Ts>
 void write(T arg, Ts ... args) {write(arg);if(sizeof...(args)!=0) {putchar(' ');write(args ...);}}
 const ll MOD=1e9+7,N=1e6+10;
 int n,m,f[N],dis[N],num[N],x,y; 
-char op;
+char op[10];
 int Find(int x){
 	if(f[x]==x)return x;
 	int root=Find(f[x]);
@@ -41,26 +41,22 @@ void U(int x,int y){
 signed main(){
 //	freopen(".in","r",stdin);
 //	freopen(".out","w",stdout);
-	cin>>n>>m;
-	rep(i,1,n){
+	scanf("%d",&m);
+	rep(i,1,30000){
 		f[i]=i;
 		num[i]=1;
 	}
 	while(m--){
-		cin>>op;
-		if(op=='C'){
-			cin>>x;
-			Find(x);
-			write(dis[x]);
+		scanf("%s%d%d",&op,&x,&y);
+		if(op[0]=='C'){
+			int t1=Find(x),t2=Find(y);
+			if(t1==t2)write(max(0,abs(dis[x]-dis[y])-1));
+			else write(-1);
 			LF;
 		}
-		else{
-			cin>>x>>y;
-			U(x,y);
-		}
+		else U(x,y);
 	}
 //	fclose(stdin);
 //	fclose(stdout);
 	return 0;
 }
-
