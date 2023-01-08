@@ -31,8 +31,9 @@ void U(int x,int y){
 	int xx=Find(x),yy=Find(y);
 	f[xx]=f[yy];
 }
-int init(){
+void init(){
 	rep(i,1,2*n)f[i]=i;
+	flag=0;
 }
 signed main(){
 //	freopen(".in","r",stdin);
@@ -45,10 +46,7 @@ signed main(){
 			read(x,y);
 			U(x,y+n);
 			U(x+n,y);
-		}
-		flag=0;
-		rep(i,1,n){
-			if(flag or Find(x)==Find(x+n) or Find(x)==Find(y) or Find(y)==Find(y+n))flag=1;
+			if(Find(x)==Find(x+n) or Find(x)==Find(y) or Find(y)==Find(y+n))flag=1;
 		}
 		if(flag)printf("Yes\n");
 		else printf("No\n");
@@ -57,4 +55,3 @@ signed main(){
 //	fclose(stdout);
 	return 0;
 }
-
