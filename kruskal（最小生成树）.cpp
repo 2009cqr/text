@@ -44,19 +44,18 @@ void kruskal(){
 			if(ans==n-1)return;
 		}
 	}
-	ans=-1;
+	sum=-1;
 }
 signed main(){
 //	freopen(".in","r",stdin);
 //	freopen(".out","w",stdout);
 	read(n,m);
-	rep(i,1,n)f[i]=i;
+	rep(i,1,n)f[i]=i;//记得初始化，警钟长鸣
 	rep(i,1,m)read(node[i].x,node[i].y,node[i].w);
 	kruskal();
-	if(sum==-1)printf("orz");
+	if(sum==-1)printf("-1");
 	else printf("%d",sum);
 //	fclose(stdin);
 //	fclose(stdout);
 	return 0;
 }
-
