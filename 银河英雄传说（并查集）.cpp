@@ -48,7 +48,7 @@ signed main(){
 	}
 	while(m--){
 		scanf("%s%d%d",&op,&x,&y);
-		if(op[0]=='C'){
+		if(op[0]=='C'){//为了防止读入换行
 			int t1=Find(x),t2=Find(y);
 			if(t1==t2)write(max(0,abs(dis[x]-dis[y])-1));
 			else write(-1);
