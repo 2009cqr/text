@@ -48,7 +48,7 @@ signed main(){
 //	freopen(".out","w",stdout);
 	read(n);
 	rep(i,1,n){
-		rep(j,1,n)read(a[i][j]);
+		rep(j,1,n)read(a[i][j]);//表示i,j有一条花费为a[i][j]的路径
 	}
 	write(prime(1));
 //	fclose(stdin);
