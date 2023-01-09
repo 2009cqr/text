@@ -31,8 +31,8 @@ struct G{
 	int firs,nex,w;
 }edge[2*N];
 void add(int a,int b,int w){
-	edge[cnt].nex=b;
-	edge[cnt].w=1;
+	edge[cnt].firs=b;
+	edge[cnt].w=w;
 	edge[cnt].nex=head[a];
 	head[a]=cnt++;
 }
