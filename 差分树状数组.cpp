@@ -23,12 +23,12 @@ template<typename T, typename ... Ts>
 void write(T arg, Ts ... args) {write(arg);if(sizeof...(args)!=0) {putchar(' ');write(args ...);}}
 const ll MOD=1e9+7,N=1e6+10;
 ll t,sum1[N],sum2[N],n,q,op,l,r,k;
-ll lowbit(ll x){return x&(-x);}//¶ş½øÖÆÖĞ×îµÍÎ»µÄ 1ÔÚÊ²Ã´Î»ÖÃ 
-void add(ll l,ll r,ll k){//´Ólµ½r¶¼¼Ók 
+ll lowbit(ll x){return x&(-x);}//äºŒè¿›åˆ¶ä¸­æœ€ä½ä½çš„ 1åœ¨ä»€ä¹ˆä½ç½® 
+void add(ll l,ll r,ll k){//ä»låˆ°réƒ½åŠ k 
 	for(ll i=l;i<=n;i+=lowbit(i))sum1[i]+=k,sum2[i]+=k*l;
 	for(ll i=r+1;i<=n;i+=lowbit(i))sum1[i]-=k,sum2[i]-=k*(r+1);
 }
-ll getsum(int x){//´Ó1µ½xµÄÇ°×ººÍ 
+ll getsum(int x){//ä»1åˆ°xçš„å‰ç¼€å’Œ 
 	ll sum=0;
 	for(ll i=x;i;i-=lowbit(i))sum+=(x+1)*sum1[i]-sum2[i];
 	return sum;
