@@ -1,16 +1,30 @@
-#include<bits/stdc++.h>
+#include <algorithm>
+#include <cmath>
+#include <cstdio>
+#include <cstring>
+#include <deque>
+#include <map>
+#include <iomanip>
+#include <iostream>
+#include <queue>
+#include <set>
+#include <stack>
+#include <string>
+#include <vector>
 using namespace std;
 #define LF putchar('\n')
 #define SP putchar(' ')
 #define rep(i,a,b) for(register int i=(a);i<=(b);++i)
 #define repp(i,a,b) for(register int i=(a);i>=(b);i--)
-#define pair<int,int> pill
+#define pill pair<int,int>
 #define mem(t, v) memset((t),v,sizeof(t))
 #define fir first
 #define sec second
 #define mk make_pair
 #define INF 0x3f3f3f3f
 #define LINF 0x3f3f3f3f3f3f3f3f
+#define lc root<<1
+#define rc root<<1|1
 typedef long long ll;
 typedef unsigned long long ull;
 template<typename T>
